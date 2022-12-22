@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <set>
 #include <vector>
 #include "json.hpp"
 
@@ -14,6 +13,14 @@ bool alreadyAdded(std::vector<std::string> seen, std::string lang){
         }
     }
     return false;
+}
+
+double sum(std::vector<double> list){
+    double result {};
+    for (double each : list){
+        result += each;
+    }
+    return result;
 }
 
 int main(){
@@ -34,6 +41,8 @@ int main(){
         newParticipant["id"] = person["participantId"];
         newParticipant["name"] = person["name"];
 
+        
+
         //creates an empty json array for the participant's lanuages 
         json languages = json::array();
 
@@ -45,13 +54,15 @@ int main(){
         std::vector<std::string> seenLanguages {};
 
 
-        //double overallAverageRoundScore {};
+        double overallAverageRoundScore {};
+        double overallTotalRounds {};
 
 
         
         for (auto s : flowData["sessions"]){
-            double scorePerLang {}; 
+            std::vector<double> scorePerLang {}; 
             double roundDurPerLang {};
+            json newLang = json::object();
             
 
             //if all of a participants sessions have been checked, end the loop without going through the rest
@@ -60,41 +71,48 @@ int main(){
             }
  
             if (s["participantId"] == newParticipant["id"]){
-                json newLang;
-                
+                int checkedRounds {};
+
+                // determines the relevant round information for the current language 
+                for (auto r : s["rounds"]){
+                    for (auto round : flowData["rounds"]){
+                        if (r == round["roundId"]){
+                            checkedRounds++;
+                            double score = round["score"];
+                            scorePerLang.push_back(score);
+
+                            overallAverageRoundScore += score;
+                            overallTotalRounds++;
+                            
+                            
+                            
+                            double begining = round["startTime"];
+                            double ending = round["endTime"];
+                            roundDurPerLang += (ending - begining);
+                        }
+                        
+                    }
+                }
+
                 if (alreadyAdded(seenLanguages, s["language"])){
-                    
+                    int numOfLangs = languages.size();                    
+                    for (int i = 0; i < numOfLangs; i++){
+                        std::string currLang {languages[i]["language"]};
+
+                        if (currLang.compare(s["language"]) == 0){
+                            std::vector<double> roundScores = languages[i]["averageScore"];
+                            roundScores.insert(roundScores.end(), scorePerLang.begin(), scorePerLang.end());
+                            languages[i]["averageScore"] = roundScores;
+                        }
+                    }
                     
                 } else {
                     newLang["language"] = s["language"];
                     seenLanguages.push_back(s["language"]);
                     
-                    int checkedRounds {};
-                    int totalRounds = s["rounds"].size();
+                    newLang["averageScore"] = scorePerLang;
+                    newLang["averageRoundDuration"] += (roundDurPerLang / checkedRounds);
 
-                    // determines the relevant round information for the current language 
-                    for (auto r : s["rounds"]){
-                        for (auto round : flowData["rounds"]){
-                            if (checkedRounds == totalRounds){
-                                break;
-                            }
-                            if (r == round["roundId"]){
-                                checkedRounds++;
-                                int score = round["score"];
-                                scorePerLang += score;
-                                
-                                
-                                double begining = round["startTime"];
-                                double ending = round["endTime"];
-                                roundDurPerLang += (ending - begining);
-                            }
-                        }
-                    }
-                    newLang["averageScore"] += (scorePerLang / totalRounds);
-                    newLang["averageRoundDuration"] += (roundDurPerLang / totalRounds);
-
-                    
-                    
 
                     languages += newLang;
                 }
@@ -105,13 +123,35 @@ int main(){
                 totalSessionDuration += (ending - begining);
                 checkedSessions++;
             }
+   
+        }
+        newParticipant["languages"] = languages;
 
+
+        //Once every round's score has been listen under each language, the are averaged together
+        int partLangs = newParticipant["languages"].size();
+        for (int i = 0; i < partLangs; i++){
+            try {
+                std::vector<double> scores = newParticipant["languages"][i]["averageScore"];
+                double aveScore = sum(scores) / scores.size();
+                newParticipant["languages"][i]["averageScore"] = aveScore;
+                
+                throw "Not a vector";
+            } catch(...) {
+
+            }
             
         }
 
+        // Calcualtes the average round score, if there is something to calculate
+        if (overallTotalRounds > 0){
+            newParticipant["averageRoundScore"] = overallAverageRoundScore / overallTotalRounds;
+        } else {
+            newParticipant["averageRoundScore"] = "N/A";
+        }
+        
 
         if (checkedSessions > 0){
-                newParticipant["languages"] = languages;
                 double aveDuration = totalSessionDuration / checkedSessions;
                 newParticipant["averageSessionDuration"] = ceil(aveDuration * 100.0) / 100.0;
             } else {
@@ -124,6 +164,7 @@ int main(){
 
     std::cout << resultsData.dump(4) << std::endl;
     
+
 
     return 0;
 }
