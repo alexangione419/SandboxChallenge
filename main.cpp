@@ -4,7 +4,7 @@
 #include <vector>
 #include "json.hpp"
 
-using json = nlohmann::json;
+using json = nlohmann::ordered_json;
 
 bool alreadyAdded(std::vector<std::string> seen, std::string lang){
     for (std::string each : seen){
@@ -61,7 +61,7 @@ int main(){
         
         for (auto s : flowData["sessions"]){
             std::vector<double> scorePerLang {}; 
-            double roundDurPerLang {};
+            std::vector<double> roundDurPerLang {};
             json newLang = json::object();
             
 
@@ -85,10 +85,9 @@ int main(){
                             overallTotalRounds++;
                             
                             
-                            
                             double begining = round["startTime"];
                             double ending = round["endTime"];
-                            roundDurPerLang += (ending - begining);
+                            roundDurPerLang.push_back(ending - begining);
                         }
                         
                     }
@@ -103,6 +102,10 @@ int main(){
                             std::vector<double> roundScores = languages[i]["averageScore"];
                             roundScores.insert(roundScores.end(), scorePerLang.begin(), scorePerLang.end());
                             languages[i]["averageScore"] = roundScores;
+
+                            std::vector<double> roundLengths = languages[i]["averageRoundDuration"];
+                            roundLengths.insert(roundLengths.end(), roundDurPerLang.begin(), roundDurPerLang.end());
+                            languages[i]["averageRoundDuration"] = roundLengths;
                         }
                     }
                     
@@ -111,8 +114,7 @@ int main(){
                     seenLanguages.push_back(s["language"]);
                     
                     newLang["averageScore"] = scorePerLang;
-                    newLang["averageRoundDuration"] += (roundDurPerLang / checkedRounds);
-
+                    newLang["averageRoundDuration"] = roundDurPerLang;
 
                     languages += newLang;
                 }
@@ -135,6 +137,10 @@ int main(){
                 std::vector<double> scores = newParticipant["languages"][i]["averageScore"];
                 double aveScore = sum(scores) / scores.size();
                 newParticipant["languages"][i]["averageScore"] = aveScore;
+
+                std::vector<double> lengths = newParticipant["languages"][i]["averageRoundDuration"];
+                double aveLength = sum(lengths) / lengths.size();
+                newParticipant["languages"][i]["averageRoundDuration"] = aveLength;
                 
                 throw "Not a vector";
             } catch(...) {
