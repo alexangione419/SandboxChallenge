@@ -169,7 +169,10 @@ int main(){
 
     }
 
-    std::cout << resultsData.dump(4) << std::endl;
+    std::ofstream results("participantResults.json");
+    results << resultsData.dump(2);
+    results.close();
+
     
 
 

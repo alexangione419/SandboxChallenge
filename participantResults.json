@@ -1,0 +1,447 @@
+[
+  {
+    "id": 0,
+    "name": "Aang",
+    "languages": [
+      {
+        "language": "Japanese",
+        "averageScore": 10.08,
+        "averageRoundDuration": 266.77
+      },
+      {
+        "language": "German",
+        "averageScore": 14.08,
+        "averageRoundDuration": 186.39
+      },
+      {
+        "language": "French",
+        "averageScore": 9.67,
+        "averageRoundDuration": 72.0
+      }
+    ],
+    "averageRoundScore": 11.83,
+    "averageSessionDuration": 1221.41
+  },
+  {
+    "id": 1,
+    "name": "Sokka",
+    "languages": [
+      {
+        "language": "German",
+        "averageScore": 23.0,
+        "averageRoundDuration": 174.0
+      }
+    ],
+    "averageRoundScore": 23.0,
+    "averageSessionDuration": 174.0
+  },
+  {
+    "id": 2,
+    "name": "Katara",
+    "languages": [
+      {
+        "language": "German",
+        "averageScore": 9.0,
+        "averageRoundDuration": 163.0
+      },
+      {
+        "language": "Japanese",
+        "averageScore": 14.5,
+        "averageRoundDuration": 247.0
+      },
+      {
+        "language": "French",
+        "averageScore": 10.84,
+        "averageRoundDuration": 75.0
+      }
+    ],
+    "averageRoundScore": 10.95,
+    "averageSessionDuration": 859.67
+  },
+  {
+    "id": 3,
+    "name": "Zuko",
+    "languages": [
+      {
+        "language": "German",
+        "averageScore": 11.11,
+        "averageRoundDuration": 221.74
+      },
+      {
+        "language": "Japanese",
+        "averageScore": 19.0,
+        "averageRoundDuration": 226.0
+      },
+      {
+        "language": "French",
+        "averageScore": 13.67,
+        "averageRoundDuration": 147.89
+      }
+    ],
+    "averageRoundScore": 12.53,
+    "averageSessionDuration": 887.63
+  },
+  {
+    "id": 4,
+    "name": "Iroh",
+    "languages": [
+      {
+        "language": "French",
+        "averageScore": 14.23,
+        "averageRoundDuration": 106.34
+      }
+    ],
+    "averageRoundScore": 14.23,
+    "averageSessionDuration": 478.5
+  },
+  {
+    "id": 5,
+    "name": "Appa",
+    "languages": [
+      {
+        "language": "German",
+        "averageScore": 15.29,
+        "averageRoundDuration": 155.0
+      }
+    ],
+    "averageRoundScore": 15.29,
+    "averageSessionDuration": 1085.0
+  },
+  {
+    "id": 6,
+    "name": "Momo",
+    "languages": [
+      {
+        "language": "French",
+        "averageScore": 19.0,
+        "averageRoundDuration": 175.0
+      }
+    ],
+    "averageRoundScore": 19.0,
+    "averageSessionDuration": 1400.0
+  },
+  {
+    "id": 7,
+    "name": "Toph",
+    "languages": [
+      {
+        "language": "German",
+        "averageScore": 7.1,
+        "averageRoundDuration": 202.2
+      }
+    ],
+    "averageRoundScore": 7.1,
+    "averageSessionDuration": 1011.0
+  },
+  {
+    "id": 8,
+    "name": "Azula",
+    "languages": [
+      {
+        "language": "French",
+        "averageScore": 12.0,
+        "averageRoundDuration": 179.0
+      }
+    ],
+    "averageRoundScore": 12.0,
+    "averageSessionDuration": 1074.0
+  },
+  {
+    "id": 9,
+    "name": "Suki",
+    "languages": [
+      {
+        "language": "French",
+        "averageScore": 13.38,
+        "averageRoundDuration": 130.07
+      },
+      {
+        "language": "Japanese",
+        "averageScore": 12.07,
+        "averageRoundDuration": 270.07
+      }
+    ],
+    "averageRoundScore": 12.75,
+    "averageSessionDuration": 1226.41
+  },
+  {
+    "id": 10,
+    "name": "Fire Lord Ozai",
+    "languages": [
+      {
+        "language": "French",
+        "averageScore": 13.82,
+        "averageRoundDuration": 84.91
+      },
+      {
+        "language": "Japanese",
+        "averageScore": 9.73,
+        "averageRoundDuration": 237.1
+      },
+      {
+        "language": "German",
+        "averageScore": 14.2,
+        "averageRoundDuration": 188.8
+      }
+    ],
+    "averageRoundScore": 12.54,
+    "averageSessionDuration": 905.0
+  },
+  {
+    "id": 11,
+    "name": "Mai",
+    "languages": [
+      {
+        "language": "French",
+        "averageScore": 16.25,
+        "averageRoundDuration": 124.0
+      },
+      {
+        "language": "German",
+        "averageScore": 12.14,
+        "averageRoundDuration": 186.34
+      },
+      {
+        "language": "Japanese",
+        "averageScore": 13.82,
+        "averageRoundDuration": 231.37
+      }
+    ],
+    "averageRoundScore": 13.3,
+    "averageSessionDuration": 833.72
+  },
+  {
+    "id": 12,
+    "name": "Ty Lee",
+    "languages": [
+      {
+        "language": "German",
+        "averageScore": 9.43,
+        "averageRoundDuration": 140.58
+      },
+      {
+        "language": "Japanese",
+        "averageScore": 9.5,
+        "averageRoundDuration": 236.5
+      },
+      {
+        "language": "French",
+        "averageScore": 15.14,
+        "averageRoundDuration": 154.54
+      }
+    ],
+    "averageRoundScore": 13.0,
+    "averageSessionDuration": 471.88
+  },
+  {
+    "id": 13,
+    "name": "King Bumi",
+    "languages": [
+      {
+        "language": "German",
+        "averageScore": 15.8,
+        "averageRoundDuration": 232.0
+      },
+      {
+        "language": "French",
+        "averageScore": 11.6,
+        "averageRoundDuration": 82.0
+      }
+    ],
+    "averageRoundScore": 13.0,
+    "averageSessionDuration": 660.0
+  },
+  {
+    "id": 14,
+    "name": "Princess Yue",
+    "languages": [
+      {
+        "language": "German",
+        "averageScore": 12.08,
+        "averageRoundDuration": 154.5
+      },
+      {
+        "language": "Japanese",
+        "averageScore": 8.78,
+        "averageRoundDuration": 237.56
+      }
+    ],
+    "averageRoundScore": 10.79,
+    "averageSessionDuration": 1075.25
+  },
+  {
+    "id": 15,
+    "name": "Roku",
+    "languages": [
+      {
+        "language": "German",
+        "averageScore": 8.72,
+        "averageRoundDuration": 189.58
+      },
+      {
+        "language": "French",
+        "averageScore": 10.5,
+        "averageRoundDuration": 153.42
+      }
+    ],
+    "averageRoundScore": 9.54,
+    "averageSessionDuration": 1123.75
+  },
+  {
+    "id": 16,
+    "name": "Sozin",
+    "languages": [
+      {
+        "language": "French",
+        "averageScore": 16.5,
+        "averageRoundDuration": 176.0
+      },
+      {
+        "language": "German",
+        "averageScore": 10.0,
+        "averageRoundDuration": 145.0
+      }
+    ],
+    "averageRoundScore": 11.63,
+    "averageSessionDuration": 611.0
+  },
+  {
+    "id": 17,
+    "name": "Hakoda",
+    "languages": [
+      {
+        "language": "Japanese",
+        "averageScore": 6.0,
+        "averageRoundDuration": 213.67
+      }
+    ],
+    "averageRoundScore": 6.0,
+    "averageSessionDuration": 320.5
+  },
+  {
+    "id": 18,
+    "name": "Kyoshi",
+    "languages": [
+      {
+        "language": "German",
+        "averageScore": 16.85,
+        "averageRoundDuration": 200.7
+      },
+      {
+        "language": "Japanese",
+        "averageScore": 9.5,
+        "averageRoundDuration": 222.0
+      }
+    ],
+    "averageRoundScore": 14.53,
+    "averageSessionDuration": 1313.67
+  },
+  {
+    "id": 19,
+    "name": "Cabbage Merchant",
+    "languages": [
+      {
+        "language": "French",
+        "averageScore": 10.53,
+        "averageRoundDuration": 127.09
+      },
+      {
+        "language": "German",
+        "averageScore": 9.29,
+        "averageRoundDuration": 186.79
+      }
+    ],
+    "averageRoundScore": 10.06,
+    "averageSessionDuration": 791.15
+  },
+  {
+    "id": 20,
+    "name": "Jet",
+    "languages": [
+      {
+        "language": "Japanese",
+        "averageScore": 9.58,
+        "averageRoundDuration": 233.29
+      },
+      {
+        "language": "French",
+        "averageScore": 9.5,
+        "averageRoundDuration": 87.0
+      }
+    ],
+    "averageRoundScore": 9.56,
+    "averageSessionDuration": 932.5
+  },
+  {
+    "id": 21,
+    "name": "Swampbenders",
+    "languages": [
+      {
+        "language": "French",
+        "averageScore": 4.0,
+        "averageRoundDuration": 81.0
+      },
+      {
+        "language": "German",
+        "averageScore": 20.0,
+        "averageRoundDuration": 122.0
+      }
+    ],
+    "averageRoundScore": 12.0,
+    "averageSessionDuration": 101.5
+  },
+  {
+    "id": 22,
+    "name": "Sparky Sparky Boom Boom Man",
+    "languages": [
+      {
+        "language": "French",
+        "averageScore": 8.0,
+        "averageRoundDuration": 109.5
+      },
+      {
+        "language": "Japanese",
+        "averageScore": 20.0,
+        "averageRoundDuration": 184.0
+      }
+    ],
+    "averageRoundScore": 12.0,
+    "averageSessionDuration": 134.34
+  },
+  {
+    "id": 23,
+    "name": "Master Piandao",
+    "languages": [
+      {
+        "language": "French",
+        "averageScore": 9.0,
+        "averageRoundDuration": 122.0
+      }
+    ],
+    "averageRoundScore": 9.0,
+    "averageSessionDuration": 122.0
+  },
+  {
+    "id": 24,
+    "name": "Haru",
+    "languages": [
+      {
+        "language": "Japanese",
+        "averageScore": 16.25,
+        "averageRoundDuration": 254.75
+      },
+      {
+        "language": "French",
+        "averageScore": 13.5,
+        "averageRoundDuration": 91.0
+      },
+      {
+        "language": "German",
+        "averageScore": 18.0,
+        "averageRoundDuration": 131.0
+      }
+    ],
+    "averageRoundScore": 15.72,
+    "averageSessionDuration": 190.29
+  }
+]
