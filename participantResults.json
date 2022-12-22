@@ -4,14 +4,14 @@
     "name": "Aang",
     "languages": [
       {
-        "language": "Japanese",
-        "averageScore": 10.08,
-        "averageRoundDuration": 266.77
-      },
-      {
         "language": "German",
         "averageScore": 14.08,
         "averageRoundDuration": 186.39
+      },
+      {
+        "language": "Japanese",
+        "averageScore": 10.08,
+        "averageRoundDuration": 266.77
       },
       {
         "language": "French",
@@ -40,14 +40,14 @@
     "name": "Katara",
     "languages": [
       {
-        "language": "German",
-        "averageScore": 9.0,
-        "averageRoundDuration": 163.0
-      },
-      {
         "language": "Japanese",
         "averageScore": 14.5,
         "averageRoundDuration": 247.0
+      },
+      {
+        "language": "German",
+        "averageScore": 9.0,
+        "averageRoundDuration": 163.0
       },
       {
         "language": "French",
@@ -63,14 +63,14 @@
     "name": "Zuko",
     "languages": [
       {
-        "language": "German",
-        "averageScore": 11.11,
-        "averageRoundDuration": 221.74
-      },
-      {
         "language": "Japanese",
         "averageScore": 19.0,
         "averageRoundDuration": 226.0
+      },
+      {
+        "language": "German",
+        "averageScore": 11.11,
+        "averageRoundDuration": 221.74
       },
       {
         "language": "French",
@@ -169,14 +169,14 @@
     "name": "Fire Lord Ozai",
     "languages": [
       {
-        "language": "French",
-        "averageScore": 13.82,
-        "averageRoundDuration": 84.91
-      },
-      {
         "language": "Japanese",
         "averageScore": 9.73,
         "averageRoundDuration": 237.1
+      },
+      {
+        "language": "French",
+        "averageScore": 13.82,
+        "averageRoundDuration": 84.91
       },
       {
         "language": "German",
@@ -192,14 +192,14 @@
     "name": "Mai",
     "languages": [
       {
-        "language": "French",
-        "averageScore": 16.25,
-        "averageRoundDuration": 124.0
-      },
-      {
         "language": "German",
         "averageScore": 12.14,
         "averageRoundDuration": 186.34
+      },
+      {
+        "language": "French",
+        "averageScore": 16.25,
+        "averageRoundDuration": 124.0
       },
       {
         "language": "Japanese",
@@ -215,14 +215,14 @@
     "name": "Ty Lee",
     "languages": [
       {
-        "language": "German",
-        "averageScore": 9.43,
-        "averageRoundDuration": 140.58
-      },
-      {
         "language": "Japanese",
         "averageScore": 9.5,
         "averageRoundDuration": 236.5
+      },
+      {
+        "language": "German",
+        "averageScore": 9.43,
+        "averageRoundDuration": 140.58
       },
       {
         "language": "French",
@@ -426,14 +426,14 @@
     "name": "Haru",
     "languages": [
       {
-        "language": "Japanese",
-        "averageScore": 16.25,
-        "averageRoundDuration": 254.75
-      },
-      {
         "language": "French",
         "averageScore": 13.5,
         "averageRoundDuration": 91.0
+      },
+      {
+        "language": "Japanese",
+        "averageScore": 16.25,
+        "averageRoundDuration": 254.75
       },
       {
         "language": "German",
