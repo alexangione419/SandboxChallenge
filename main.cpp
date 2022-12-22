@@ -26,7 +26,7 @@ double sum(std::vector<double> list){
 int main(){
     // Creates JSON object from json file. 
     // Information in file obtained from Postman HTTP GET request
-    std::ifstream f("testJSON.json");
+    std::ifstream f("sandboxJSON.json");
     json flowData = json::parse(f);
 
     json resultsData = json::array();
@@ -136,11 +136,11 @@ int main(){
             try {
                 std::vector<double> scores = newParticipant["languages"][i]["averageScore"];
                 double aveScore = sum(scores) / scores.size();
-                newParticipant["languages"][i]["averageScore"] = aveScore;
+                newParticipant["languages"][i]["averageScore"] = ceil(aveScore * 100.0) / 100.0;
 
                 std::vector<double> lengths = newParticipant["languages"][i]["averageRoundDuration"];
                 double aveLength = sum(lengths) / lengths.size();
-                newParticipant["languages"][i]["averageRoundDuration"] = aveLength;
+                newParticipant["languages"][i]["averageRoundDuration"] = ceil(aveLength * 100.0) / 100.0;
                 
                 throw "Not a vector";
             } catch(...) {
@@ -151,7 +151,8 @@ int main(){
 
         // Calcualtes the average round score, if there is something to calculate
         if (overallTotalRounds > 0){
-            newParticipant["averageRoundScore"] = overallAverageRoundScore / overallTotalRounds;
+            double aveScore = overallAverageRoundScore / overallTotalRounds;
+            newParticipant["averageRoundScore"] = ceil(aveScore * 100.0) / 100.0;
         } else {
             newParticipant["averageRoundScore"] = "N/A";
         }
